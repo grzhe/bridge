@@ -54,6 +54,7 @@ jobs:
         env:
           JAVA_HOME: /usr/lib/jvm/java-17-openjdk/
         with:
+          maven-servers: '[{"id": "github", "username": "${{vars.REPO_USER}}", "password": "${{secrets.REPO_PASS}}" }]'
           maven-args: "-Dmaven.javadoc.skip=true -DskipTests -DskipITs -Dmaven.deploy.skip=true"
           maven-options: "-DbranchName=release"
           release-branch-name: "jdk-17-grz"
