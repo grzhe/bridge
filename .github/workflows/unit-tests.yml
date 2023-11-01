@@ -14,3 +14,5 @@ jobs:
           distribution: 'temurin'
       - name: Run Unit Tests
         run: xvfb-run --auto-servernum mvn test -B
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
