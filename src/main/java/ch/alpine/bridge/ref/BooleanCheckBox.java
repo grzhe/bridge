@@ -1,10 +1,12 @@
 // code by jph, gjoel
 package ch.alpine.bridge.ref;
 
+import java.awt.FlowLayout;
 import java.util.Objects;
 
 import javax.swing.JCheckBox;
 import javax.swing.JComponent;
+import javax.swing.JPanel;
 
 /* package */ class BooleanCheckBox extends FieldPanel {
   /** the insets of the checkbox are typically 4,4,4,4 or 2,2,2,2 */
@@ -24,7 +26,9 @@ import javax.swing.JComponent;
 
   @Override // from FieldPanel
   public JComponent getJComponent() {
-    return jCheckBox;
+    JPanel jPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+    jPanel.add(jCheckBox);
+    return jPanel;
   }
 
   @Override // from FieldPanel

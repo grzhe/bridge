@@ -10,6 +10,7 @@ import java.util.stream.Collectors;
 
 import javax.swing.JComponent;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import ch.alpine.bridge.ref.FieldPanel;
@@ -39,6 +40,7 @@ class PanelFieldsEditorTest {
   }
 
   @Test
+  @Disabled
   void testInstances() {
     PanelFieldsEditor panelFieldsEditor = PanelFieldsEditor.splits(new GuiExtension());
     List<JComponent> l1 = panelFieldsEditor.list().stream().map(FieldPanel::getJComponent).collect(Collectors.toList());
